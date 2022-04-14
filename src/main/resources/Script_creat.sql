@@ -85,5 +85,5 @@ alter table oauth_refresh_token
 INSERT INTO public.oauth_client_details (client_id, resource_ids, client_secret, scope, authorized_grant_types,
                                          web_server_redirect_uri, authorities, access_token_validity,
                                          refresh_token_validity, additional_information, autoapprove)
-VALUES ('OAUTH', 'OAUTH,AUTH', '$2a$04$9timSiqpo3EMgNm0Hh6oYe3GvxOVSOPEoizCsvRlQYlgj2.s/ee5C', 'read,write,trust',
+VALUES ('OAUTH', 'OAUTH,AUTH,core', '$2a$04$9timSiqpo3EMgNm0Hh6oYe3GvxOVSOPEoizCsvRlQYlgj2.s/ee5C', 'read,write,trust',
         'password,authorization_code,refresh_token,implicit', null, null, 864000000, null, null, 'true');
