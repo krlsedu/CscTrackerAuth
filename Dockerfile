@@ -1,4 +1,3 @@
-LABEL maintainer="krlsedu@gmail.com"
 
 FROM adoptopenjdk/openjdk11:alpine-jre
 WORKDIR /opt/app
