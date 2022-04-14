@@ -42,7 +42,7 @@ import java.util.Set;
 @Service("userService")
 public class UserService implements UserDetailsService {
     //private static final String APPLICATION_NAME = "GRP TESTE CLIENTE";
-    private final String APPLICATION_NAME = "GRPDEV WEB";
+    private final String APPLICATION_NAME = "CscTracker";
     private final UserRepository userRepository;
     private final TokenService tokenService;
     private final ClientDetailsService clientDetailsService;

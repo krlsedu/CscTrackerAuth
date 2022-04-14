@@ -6,8 +6,8 @@ networks:
 
 services:
   csctracker:
-    container_name: csctracker-auth
-    hostname: csctracker-auth
+    container_name: auth
+    hostname: auth
     image: krlsedu/csctracker-auth
     restart: always
     environment:
