@@ -47,8 +47,8 @@ public class UserService implements UserDetailsService {
     private final TokenService tokenService;
     private final ClientDetailsService clientDetailsService;
     private final Conversor<User, UserDTO> conversor;
-    @Value("${server.port}")
-    private String SERVER_PORT;
+    @Value("${url.ouathServer}")
+    private String SERVER_URL;
     @Value("${oauth-client_id}")
     private String CLIENT_ID;
     @Value("${oauth-secret}")
@@ -76,7 +76,8 @@ public class UserService implements UserDetailsService {
         TokenGoogle json = new TokenGoogle();
 
         if (url == null) {
-            json.setRedirect_uri("http://127.0.0.1:" + SERVER_PORT + "/oauth");
+            json.setRedirect_uri(SERVER_URL + "/oauth");
+            System.out.println("URL: " + json.getRedirect_uri());
         } else {
             json.setRedirect_uri(url);
         }
