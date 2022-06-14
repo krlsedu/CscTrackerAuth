@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.ServletException;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.security.Principal;
 
 @RestController
 public class AuthController {
@@ -32,5 +33,10 @@ public class AuthController {
                                          @RequestParam(value = "tokenGoogle", required = false) String tokenGoogleSt) {
 
         return new ResponseEntity<>(userService.getAuth(usuarioDTO, autorazationCode, url, tokenGoogleSt), HttpStatus.OK);
+    }
+
+    @GetMapping("current-user")
+    public ResponseEntity<UserDTO> currentUser(Principal principal) {
+        return new ResponseEntity<>(userService.getUser(principal), HttpStatus.OK);
     }
 }

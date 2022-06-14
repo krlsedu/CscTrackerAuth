@@ -34,6 +34,7 @@ import org.springframework.stereotype.Service;
 import javax.servlet.ServletException;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.security.Principal;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -250,5 +251,13 @@ public class UserService implements UserDetailsService {
             throw new UnAuthorized("Error on Oauth!");
         }
         return oauth(usuarioDTO);
+    }
+
+    public UserDTO getUser(Principal principal) {
+        User user = userRepository.findByEmail(principal.getName());
+        if (user == null) {
+            throw new UnAuthorized("Error on Oauth!");
+        }
+        return conversor.toT(user);
     }
 }
