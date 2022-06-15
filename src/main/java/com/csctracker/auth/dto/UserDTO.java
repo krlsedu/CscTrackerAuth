@@ -1,6 +1,6 @@
 package com.csctracker.auth.dto;
 
-import com.csctracker.auth.enums.UserType;
+import com.csctracker.enums.UserType;
 import lombok.Getter;
 import lombok.Setter;
 

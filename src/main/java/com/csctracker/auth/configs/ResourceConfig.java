@@ -32,6 +32,7 @@ public class ResourceConfig extends ResourceServerConfigurerAdapter {
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .antMatchers("/oauth").permitAll()
                 .antMatchers("/favicon.*").permitAll()
+                .antMatchers("/actuator/**").permitAll()
                 .anyRequest().authenticated()
                 .and().httpBasic()
                 .and().exceptionHandling().accessDeniedHandler(accessDeniedHandler())
