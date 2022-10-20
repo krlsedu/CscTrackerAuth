@@ -1,5 +1,5 @@
 
-FROM ghcr.io/graalvm/graalvm-ce:ol8-java11-20.3.6
+FROM adoptopenjdk/openjdk11:alpine-jre
 WORKDIR /opt/app
 
 ARG JAR_FILE=target/csctracker-auth.jar
