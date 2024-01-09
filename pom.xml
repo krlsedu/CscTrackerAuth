@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.csctracker</groupId>
         <artifactId>starter</artifactId>
-        <version>3.0.15</version>
+        <version>24.02.002</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
