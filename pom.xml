@@ -11,7 +11,7 @@
     <artifactId>CscTrackerAuth</artifactId>
     <name>CscTrackerAuth</name>
     <description>CscTrackerAuth</description>
-    <version>24.02.003</version>
+    <version>24.02.004</version>
 
     <properties>
         <java.version>11</java.version>
